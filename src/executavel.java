@@ -50,7 +50,7 @@ public class executavel {
                 System.out.println("Digite o número da conta: ");
                 remover(sc.nextInt());
             }
-            case 4 -> gerarRelatorio();
+            case 4 -> System.out.println(banco.mostrarDados());
             case 5 -> System.exit(0);
         }
     }
@@ -97,9 +97,10 @@ public class executavel {
                 case 2 -> sacar(valor());
                 case 3 -> {
                     System.out.println("Informe o número da conta: ");
-                    transferir(valor(), sc.nextInt());
+                    int numero = sc.nextInt();
+                    transferir(valor(), numero);
                 }
-                case 4 -> gerarRelatorio();
+                case 4 -> banco.mostrarDados();
                 case 5 -> contaLogada = null;
             }
         } while (contaLogada != null);

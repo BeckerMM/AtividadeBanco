@@ -27,7 +27,7 @@ public class Banco  implements Imprimivel {
     public String mostrarDados() {
         String contas = "";
         for (ContaBancaria conta : this.contasBancarias) {
-            contas += conta;
+            contas += "\n" + conta.mostrarDados();
         }
         return contas;
     }
